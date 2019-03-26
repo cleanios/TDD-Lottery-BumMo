@@ -185,9 +185,11 @@
 				TargetAttributes = {
 					16D0239722485C21001ED2E8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					16D023AB22485C22001ED2E8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 16D0239722485C21001ED2E8;
 					};
 				};
@@ -413,7 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gbmksquare.TDD-Lottery-BumMo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -431,7 +433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gbmksquare.TDD-Lottery-BumMo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -451,7 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gbmksquare.TDD-Lottery-BumMoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD Lottery BumMo.app/TDD Lottery BumMo";
 			};
@@ -472,7 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gbmksquare.TDD-Lottery-BumMoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD Lottery BumMo.app/TDD Lottery BumMo";
 			};
