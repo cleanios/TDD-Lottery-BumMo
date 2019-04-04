@@ -1,6 +1,6 @@
 # TDD Lottery
 
-First TDD Pracice based on following link:
+First TDD Practice based on following link:
 
 https://www.slipp.net/questions/590
 

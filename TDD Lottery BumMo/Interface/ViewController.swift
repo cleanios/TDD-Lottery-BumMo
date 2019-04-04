@@ -31,39 +31,52 @@ class ViewController: UIViewController {
         let lotteries = store.purcahse(with: cash)
         purchasedLotteries = lotteries
         
-        updateResult()
+        var lotteryText = getInitialText()
+        lotteryText = appendLotteryDescription(to: lotteryText)
+        updateResult(lotteryText)
     }
     
     @IBAction private func tapped(draw button: UIButton) {
         machine.drawWinningLottery()
         
-        updateResult()
+        var text = getInitialText()
+        text = appendLotteryDescription(to: text)
+        text = appendDrawResult(to: text)
+        updateResult(text)
     }
     
-    private func updateResult() {
-        var text = ""
-        
+    private func updateResult(_ text: String) {
+        resultTextView.text = text
+    }
+    
+    private func getInitialText() -> String {
         guard let lotteries = purchasedLotteries else {
-            resultTextView.text = "No purchased lotteries."
-            return
+            return "No purchased lotteries."
+        }
+        return "Purchased \(lotteries.count) lotteries.\n"
+    }
+    
+    private func appendLotteryDescription(to inputText: String) -> String {
+        guard let lotteries = purchasedLotteries else {
+            return inputText
         }
         
-        text += "Purchased \(lotteries.count) lotteries.\n"
-        
+        var text = inputText
         for lottery in lotteries {
             let description = lottery.numbers
             text += "\(description)\n"
         }
-        
-        resultTextView.text = text
-        
-        // MARK: Draw Result
-        guard let winningLottery = machine.winning,
+        return text
+    }
+    
+    private func appendDrawResult(to inputText: String) -> String {
+        guard let lotteries = purchasedLotteries,
+            let winningLottery = machine.winning,
             let bonusNumber = machine.bonusNumber else {
-                return
+                return inputText
         }
         
-        text += "\nWinning lottery is \(winningLottery.numbers).\nBonus number is \(bonusNumber).\n"
+        var text = inputText + "\nWinning lottery is \(winningLottery.numbers).\nBonus number is \(bonusNumber).\n"
         
         for (index, lottery) in lotteries.enumerated() {
             let result = lottery.checkMatching(with: winningLottery)
@@ -75,8 +88,7 @@ class ViewController: UIViewController {
                 text += " Got nothing.\n"
             }
         }
-        
-        resultTextView.text = text
+        return text
     }
 }
 
