@@ -1,10 +1,24 @@
 # TDD Lottery
 
+First TDD Practice based on following link:
+
+https://www.slipp.net/questions/590
+
+
+
+## Configuration
+
+Built and tested on:
+
+- macOS Mojave 10.14.3
+- Xcode 10.1
+- Swift 4.2
+
 
 
 ## License
 
-Copyright 2019 Cleanios
+Copyright 2019 BumMo Koo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
